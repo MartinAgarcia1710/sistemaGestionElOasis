@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1702927729 source:c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\globales.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"globales.h"
+
+1702901898 c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\globales.h
+
+1702930552 source:c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\main.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	<ctime>
+	"globales.h"
+	"Articulo.h"
+	"ArchivoArticulo.h"
+	"fecha.h"
+
+1702903057 c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\articulo.h
+	"globales.h"
+
+1702904420 source:c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\articulo.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"Articulo.h"
+	"globales.h"
+
+1702926545 source:c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\archivoarticulo.cpp
+	"ArchivoArticulo.h"
+	<iostream>
+	<string.h>
+	<cstring>
+	"Articulo.h"
+
+1702926572 c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\archivoarticulo.h
+	"Articulo.h"
+
+1702930553 source:c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\fecha.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	<ctime>
+	"fecha.h"
+
+1702927768 c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\fecha.h
+
+1702930553 source:c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\venta.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	"venta.h"
+	"fecha.h"
+	"globales.h"
+
+1702930590 c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\venta.h
+	"fecha.h"
+
