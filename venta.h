@@ -6,7 +6,7 @@ class Venta{
         int numeroVenta;
         float montoTotal;
         Fecha fechaCompra;
-        char codigoArticulo[5];
+        char **detalleArticulos;
 
     public:
         Venta();

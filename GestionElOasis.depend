@@ -142,3 +142,88 @@
 	"rlutil.h"
 	"funcionesImpresion.h"
 
+1703013874 source:c:\gestioneloasis\sistemagestioneloasis\archivoarticulo.cpp
+	"ArchivoArticulo.h"
+	<iostream>
+	<string.h>
+	<cstring>
+	"Articulo.h"
+
+1703013874 c:\gestioneloasis\sistemagestioneloasis\archivoarticulo.h
+	"Articulo.h"
+
+1702903057 c:\gestioneloasis\sistemagestioneloasis\articulo.h
+	"globales.h"
+
+1703013874 c:\gestioneloasis\sistemagestioneloasis\globales.h
+
+1702904420 source:c:\gestioneloasis\sistemagestioneloasis\articulo.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"Articulo.h"
+	"globales.h"
+
+1702930553 source:c:\gestioneloasis\sistemagestioneloasis\fecha.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	<ctime>
+	"fecha.h"
+
+1702927768 c:\gestioneloasis\sistemagestioneloasis\fecha.h
+
+1703013874 source:c:\gestioneloasis\sistemagestioneloasis\funcionesimpresion.cpp
+	<iostream>
+	"funcionesImpresion.h"
+	"rlutil.h"
+
+1703013874 c:\gestioneloasis\sistemagestioneloasis\funcionesimpresion.h
+
+1703013874 c:\gestioneloasis\sistemagestioneloasis\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1703013874 source:c:\gestioneloasis\sistemagestioneloasis\globales.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"globales.h"
+	"rlutil.h"
+	"funcionesImpresion.h"
+	"Articulo.h"
+	"ArchivoArticulo.h"
+
+1703013874 source:c:\gestioneloasis\sistemagestioneloasis\main.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	<ctime>
+	"globales.h"
+	"Articulo.h"
+	"ArchivoArticulo.h"
+	"fecha.h"
+	"rlutil.h"
+	"funcionesImpresion.h"
+
+1702930553 source:c:\gestioneloasis\sistemagestioneloasis\venta.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	"venta.h"
+	"fecha.h"
+	"globales.h"
+
+1703015770 c:\gestioneloasis\sistemagestioneloasis\venta.h
+	"fecha.h"
+

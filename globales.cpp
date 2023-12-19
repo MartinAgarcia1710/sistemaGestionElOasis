@@ -35,6 +35,7 @@ void remarcarOpcion(const char* opcion, int posX, int posY, bool seleccion, int 
 
 void menuArticulos(){
     bool baja;
+    int porcentaje;
     int posBaja;
     int movimientoCursorY = 0;
     int contadorCarga = 0;
@@ -164,7 +165,22 @@ void menuArticulos(){
             }
             break;
         case 3:
-
+            system("cls");
+            std::cout << "INGRESE NOMBRE DE ARTICULO QUE QUIERE MODIFICAR\n";
+            cargarCadena(nombre, 29);
+            cantidadArticulos = arcA.contarRegistros();
+            for(int x = 0; x < cantidadArticulos; x++){
+                a = arcA.leerRegistro(x);
+                if(strcmp(nombre, a.getNombre()) == 0){
+                    std::cout << "QUE PORCENTAJE QUIERE MODIFICAR EN EL PRECIO DE COSTO?\n";
+                    std::cin >> porcentaje;
+                    a.setPrecioCosto(a.getPrecioCosto() + a.getPrecioCosto() * porcentaje / 100);
+                    std::cout << "QUE PORCENTAJE QUIERE MODIFICAR EN EL PRECIO AL PUBLICO?\n";
+                    std::cin >> porcentaje;
+                    a.setPrecioPublico(a.getPrecioPublico() + a.getPrecioPublico() * porcentaje / 100);
+                    ///FALTA METODO PARA SOBREESCRIBIR REGISTRO!
+                }
+            }
             break;
         case 4:
             system("cls");
