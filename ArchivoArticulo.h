@@ -9,6 +9,8 @@ class ArchivoArticulo{
         Articulo leerRegistro(int pos);
         int contarRegistros();
         bool grabarRegistro(Articulo reg);
+        int buscarPorNombre();
+        bool bajaLogica(Articulo reg, int posicion);
 };
 
 #endif // ARCHIVOARTICULO_H_INCLUDED

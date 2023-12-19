@@ -39,3 +39,45 @@ bool ArchivoArticulo::grabarRegistro(Articulo reg){
     fclose(p);
     return escribio;
 }
+int ArchivoArticulo::buscarPorNombre(){
+    char nombre[30];
+    Articulo reg;
+    FILE *p;
+    int posicion = 0;
+    int posReg;
+    bool existe=false;
+    p = fopen("articulos.dat","rb");
+    if(p == NULL){
+        std::cout << "ERROR DE ARCHIVO\n";
+        return -1;
+    }
+    std::cout << "INGRESAR ARTICULO A BUSCAR ";
+    std::cin >> nombre;
+    while(fread(&reg, sizeof(Articulo), 1, p) == 1){
+        if(strcmp(reg.getNombre(), nombre) == 0){
+            reg.mostrar();
+            existe = true;
+            posReg = posicion;
+        }
+        posicion++;
+    }
+    fclose(p);
+    if(existe == false){
+        std::cout << "NO HAY REGISTROS CON ESE NOMBRE\n";
+    }
+    return posReg;
+}
+bool ArchivoArticulo::bajaLogica(Articulo reg, int posicion){
+    FILE *p;
+    p = fopen("articulos.dat", "rb+");
+    if(p == NULL){
+        std::cout << "ERROR DE ARCHIVO\n";
+        return false;
+    }
+    reg.setEstado(false);
+    fseek(p, sizeof(Articulo) * posicion, 0);
+    bool baja = fwrite(&reg, sizeof(Articulo), 1, p);
+    fclose(p);
+    return baja;
+
+ }

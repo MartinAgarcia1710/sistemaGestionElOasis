@@ -57,3 +57,88 @@
 1702930590 c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\venta.h
 	"fecha.h"
 
+1702945967 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoarticulo.cpp
+	"ArchivoArticulo.h"
+	<iostream>
+	<string.h>
+	<cstring>
+	"Articulo.h"
+
+1702945541 c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoarticulo.h
+	"Articulo.h"
+
+1702935414 c:\users\martín alejandro\documents\github\sistemagestioneloasis\articulo.h
+	"globales.h"
+
+1702936868 c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.h
+
+1702935414 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\articulo.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"Articulo.h"
+	"globales.h"
+
+1702935414 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	<ctime>
+	"fecha.h"
+
+1702935414 c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.h
+
+1702945841 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"globales.h"
+	"rlutil.h"
+	"funcionesImpresion.h"
+	"Articulo.h"
+	"ArchivoArticulo.h"
+
+1702935414 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\venta.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	"venta.h"
+	"fecha.h"
+	"globales.h"
+
+1702935414 c:\users\martín alejandro\documents\github\sistemagestioneloasis\venta.h
+	"fecha.h"
+
+1702935633 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\funcionesimpresion.cpp
+	<iostream>
+	"funcionesImpresion.h"
+	"rlutil.h"
+
+1702935633 c:\users\martín alejandro\documents\github\sistemagestioneloasis\funcionesimpresion.h
+
+1702935633 c:\users\martín alejandro\documents\github\sistemagestioneloasis\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1702937194 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\main.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	<ctime>
+	"globales.h"
+	"Articulo.h"
+	"ArchivoArticulo.h"
+	"fecha.h"
+	"rlutil.h"
+	"funcionesImpresion.h"
+

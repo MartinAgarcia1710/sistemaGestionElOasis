@@ -37,6 +37,8 @@
 		<Unit filename="Articulo.h" />
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />
+		<Unit filename="funcionesImpresion.cpp" />
+		<Unit filename="funcionesImpresion.h" />
 		<Unit filename="globales.cpp" />
 		<Unit filename="globales.h" />
 		<Unit filename="main.cpp" />

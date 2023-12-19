@@ -1,0 +1,37 @@
+#pragma once
+
+void letraA(int color, int locX, int locY);
+void letraB(int color, int locX, int locY);
+void letraC(int color, int locX, int locY);
+void letraD(int color, int locX, int locY);
+void letraE(int color, int locX, int locY);
+void letraF(int color, int locX, int locY);
+void letraG(int color, int locX, int locY);
+void letraH(int color, int locX, int locY);
+void letraI(int color, int locX, int locY);
+void letraJ(int color, int locX, int locY);
+void letraK(int color, int locX, int locY);
+void letraL(int color, int locX, int locY);
+void letraM(int color, int locX, int locY);
+void letraN(int color, int locX, int locY);
+void letraO(int color, int locX, int locY);
+void letraP(int color, int locX, int locY);
+void letraQ(int color, int locX, int locY);
+void letraR(int color, int locX, int locY);
+void letraS(int color, int locX, int locY);
+void letraT(int color, int locX, int locY);
+void letraU(int color, int locX, int locY);
+void letraV(int color, int locX, int locY);
+void letraW(int color, int locX, int locY);
+void letraX(int color, int locX, int locY);
+void letraY(int color, int locX, int locY);
+void letraZ(int color, int locX, int locY);
+void apostrofe(int color, int locX, int locY);
+void dado1(int color, int locX, int locY);
+void dado2(int color, int locX, int locY);
+void dado3(int color, int locX, int locY);
+void dado4(int color, int locX, int locY);
+void dado5(int color, int locX, int locY);
+void dado6(int color, int locX, int locY);
+void muestraIntro(int x, int y);
+void animacionDados(int locX, int locY, int color);
