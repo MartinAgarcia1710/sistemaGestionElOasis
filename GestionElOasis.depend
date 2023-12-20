@@ -142,20 +142,20 @@
 	"rlutil.h"
 	"funcionesImpresion.h"
 
-1703013874 source:c:\gestioneloasis\sistemagestioneloasis\archivoarticulo.cpp
+1703096355 source:c:\gestioneloasis\sistemagestioneloasis\archivoarticulo.cpp
 	"ArchivoArticulo.h"
 	<iostream>
 	<string.h>
 	<cstring>
 	"Articulo.h"
 
-1703013874 c:\gestioneloasis\sistemagestioneloasis\archivoarticulo.h
+1703095331 c:\gestioneloasis\sistemagestioneloasis\archivoarticulo.h
 	"Articulo.h"
 
 1702903057 c:\gestioneloasis\sistemagestioneloasis\articulo.h
 	"globales.h"
 
-1703013874 c:\gestioneloasis\sistemagestioneloasis\globales.h
+1703096175 c:\gestioneloasis\sistemagestioneloasis\globales.h
 
 1702904420 source:c:\gestioneloasis\sistemagestioneloasis\articulo.cpp
 	<iostream>
@@ -194,7 +194,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1703013874 source:c:\gestioneloasis\sistemagestioneloasis\globales.cpp
+1703097097 source:c:\gestioneloasis\sistemagestioneloasis\globales.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -204,7 +204,7 @@
 	"Articulo.h"
 	"ArchivoArticulo.h"
 
-1703013874 source:c:\gestioneloasis\sistemagestioneloasis\main.cpp
+1703083683 source:c:\gestioneloasis\sistemagestioneloasis\main.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -224,6 +224,6 @@
 	"fecha.h"
 	"globales.h"
 
-1703015770 c:\gestioneloasis\sistemagestioneloasis\venta.h
+1703102625 c:\gestioneloasis\sistemagestioneloasis\venta.h
 	"fecha.h"
 

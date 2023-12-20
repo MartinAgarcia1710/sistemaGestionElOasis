@@ -3,5 +3,10 @@
 void cargarCadena(char *pal, int tam);
 void remarcarOpcion(const char* opcion, int posX, int posY, bool seleccion, int col);
 void menuArticulos();
-void menuModificarPrecios();
+void bajaLogicaDeArticulo();
+void cargaDeArticulos();
+void modificacionDeArticulos();
+void listarArticulos();
+void membrete();
+
 #endif // GLOBALES_H_INCLUDED

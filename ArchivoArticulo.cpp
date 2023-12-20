@@ -51,7 +51,7 @@ int ArchivoArticulo::buscarPorNombre(){
         std::cout << "ERROR DE ARCHIVO\n";
         return -1;
     }
-    std::cout << "INGRESAR ARTICULO A BUSCAR ";
+    std::cout << "INGRESAR ARTICULO A BUSCAR \n";
     std::cin >> nombre;
     while(fread(&reg, sizeof(Articulo), 1, p) == 1){
         if(strcmp(reg.getNombre(), nombre) == 0){
@@ -64,6 +64,7 @@ int ArchivoArticulo::buscarPorNombre(){
     fclose(p);
     if(existe == false){
         std::cout << "NO HAY REGISTROS CON ESE NOMBRE\n";
+        return -1;
     }
     return posReg;
 }
@@ -83,7 +84,7 @@ bool ArchivoArticulo::bajaLogica(Articulo reg, int posicion){
  }
 bool ArchivoArticulo::sobreEscribirRegistro(Articulo reg, int pos){
     FILE *p;
-    p = fopen(nombre, "rb+");
+    p = fopen("articulos.dat", "rb+");
     if(p == NULL){
             std::cout << "ERROR DE ARCHIVO\n";
         return false;
@@ -92,4 +93,37 @@ bool ArchivoArticulo::sobreEscribirRegistro(Articulo reg, int pos){
     bool escribio = fwrite(&reg, sizeof reg, 1, p);
     fclose(p);
     return escribio;
+}
+bool ArchivoArticulo::bajaFisica(){
+    ArchivoArticulo arcA("articulos.dat");
+    Articulo a;
+    int cantidadRegistros = arcA.contarRegistros();
+    FILE *pb;
+    FILE *p;
+    p = fopen("articulos.bak", "wb");
+    if(p == NULL){
+        return false;
+    }
+    for(int x = 0; x < cantidadRegistros; x++){
+        a = arcA.leerRegistro(x);
+        fwrite(&a, sizeof a, 1, p);
+    }
+
+    fclose(p);
+    pb = fopen("articulos.bak","rb");
+    if(pb == NULL){
+        return false;
+    }
+    p = fopen("articulos.dat","wb");
+    if(p == NULL){
+        fclose(pb);
+        return false;
+    }
+    while(fread(&a, sizeof a, 1, pb) == 1){
+        if(a.getEstado() == true){
+            fwrite(&a, sizeof a, 1, p);
+        }
+    }
+    fclose(pb);
+    fclose(p);
 }

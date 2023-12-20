@@ -70,27 +70,27 @@ void menuArticulos(){
     }
     std::cout << (char)185;
     rlutil::locate(50, 13);
-    std::cout << (char)186 << "      NUEVA PARTIDA      ";
+    std::cout << (char)186;// << "     CARGAR ARTICULOS    ";
     rlutil::locate(76, 13);
     std::cout << (char)186;
     rlutil::locate(50, 14);
-    std::cout << (char)186 << "    REANUDAR PARTIDAS    ";
+    std::cout << (char)186; // << "   MODIFICAR ARTICULOS   ";
     rlutil::locate(76, 14);
     std::cout << (char)186;
     rlutil::locate(50, 15);
-    std::cout << (char)186 << "      ESTADISTICAS       ";
+    std::cout << (char)186;// << "      ESTADISTICAS       ";
     rlutil::locate(76, 15);
     std::cout << (char)186;
     rlutil::locate(50, 16);
-    std::cout << (char)186 << "        CREDITOS!        ";
+    std::cout << (char)186;// << "        CREDITOS!        ";
     rlutil::locate(76, 16);
     std::cout << (char)186;
     rlutil::locate(50, 17);
-    std::cout << (char)186 << "          REGLAS         ";
+    std::cout << (char)186;// << "          REGLAS         ";
     rlutil::locate(76, 17);
     std::cout << (char)186;
     rlutil::locate(50, 18);
-    std::cout << (char)186 << "          SALIR          ";
+    std::cout << (char)186;// << "          SALIR          ";
     rlutil::locate(76, 18);
     std::cout << (char)186;
     rlutil::locate(50, 19);
@@ -103,96 +103,57 @@ void menuArticulos(){
 
     rlutil::locate(53, 13 + movimientoCursorY);
 
-    remarcarOpcion("     CARGAR ARTICULOS    ", 51, 13, movimientoCursorY == 0, (rand() % 14) + 1);
-    remarcarOpcion("     BUSCAR ARTICULOS    ", 51, 14, movimientoCursorY == 1, (rand() % 14) + 1);
-    remarcarOpcion(" BAJA LOGICA DE ARTICULO ", 51, 15, movimientoCursorY == 2, (rand() % 14) + 1);
-    remarcarOpcion("     MODIFICAR PRECIOS   ", 51, 16, movimientoCursorY == 3, (rand() % 14) + 1);
-    remarcarOpcion("     LISTAR ARTICULOS    ", 51, 17, movimientoCursorY == 4, (rand() % 14) + 1);
-    remarcarOpcion("          VOLVER         ", 51, 18, movimientoCursorY == 5, (rand() % 14) + 1);
+    remarcarOpcion("     CARGAR ARTICULOS    ", 51, 13, movimientoCursorY == 0, 5 + 1);
+    remarcarOpcion("   MODIFICAR ARTICULOS   ", 51, 14, movimientoCursorY == 1, 5 + 1);
+    remarcarOpcion(" BAJA LOGICA DE ARTICULO ", 51, 15, movimientoCursorY == 2, 5 + 1);
+    remarcarOpcion(" BAJA FISICA DE ARTICULO ", 51, 16, movimientoCursorY == 3, 5 + 1);
+    remarcarOpcion("     LISTAR ARTICULOS    ", 51, 17, movimientoCursorY == 4, 5 + 1);
+    remarcarOpcion("          VOLVER         ", 51, 18, movimientoCursorY == 5, 5 + 1);
 
     int cursor = rlutil::getkey();
-
+    //rlutil::setBackgroundColor(0);
     switch (cursor) {
     case 14:
         movimientoCursorY--;
-        if (movimientoCursorY < 0) {
+        if (movimientoCursorY <= 0) {
             movimientoCursorY = 0;
         }
         break;
     case 15:
         movimientoCursorY++;
-        if (movimientoCursorY > 5) {
+        if (movimientoCursorY >= 5) {
             movimientoCursorY = 5;
+            //rlutil::setBackgroundColor(0);
         }
         break;
     case 1:
         switch (movimientoCursorY) {
         case 0:
             system("cls");
-            std::cout << "CARGA DE ARTICULOS \n";
-
-            while(continuar == 1){
-                a.cargar();
-                arcA.grabarRegistro(a);
-
-                std::cout << "PRESIONE 1 PARA SEGUIR CARGANDO O 2 PARA VOLVER\n";
-                std::cin >> continuar;
-                contadorCarga++;
-            }
+            cargaDeArticulos();
 
             break;
         case 1:
             system("cls");
-            cantidadArticulos = arcA.contarRegistros();
-            std::cout << "INGRESE EL NOMBRE DEL ARTICULO QUE QUIERE BUSCAR\n";
-            cargarCadena(nombre, 29);
-            for(int x = 0; x < cantidadArticulos; x++){
-                a = arcA.leerRegistro(x);
-                if(strcmp(nombre, a.getNombre()) == 0){
-                    std::cout << "ARTICULO SOLICITADO: \n";
-                    a.mostrar();
-                }
-            }
+            modificacionDeArticulos();
+            system("pause");
             break;
         case 2:
             system("cls");
-            posBaja = arcA.buscarPorNombre();
-            a = arcA.leerRegistro(posBaja);
-            baja = arcA.bajaLogica(a, posBaja);
-            if(baja){
-                std::cout << "ARTICULO DADO DE BAJA LOGICA\n";
-            }else{
-                std::cout << "ERROR\n";
-            }
+            bajaLogicaDeArticulo();
+            system("pause");
+
             break;
         case 3:
             system("cls");
-            std::cout << "INGRESE NOMBRE DE ARTICULO QUE QUIERE MODIFICAR\n";
-            cargarCadena(nombre, 29);
-            cantidadArticulos = arcA.contarRegistros();
-            for(int x = 0; x < cantidadArticulos; x++){
-                a = arcA.leerRegistro(x);
-                if(strcmp(nombre, a.getNombre()) == 0){
-                    std::cout << "QUE PORCENTAJE QUIERE MODIFICAR EN EL PRECIO DE COSTO?\n";
-                    std::cin >> porcentaje;
-                    a.setPrecioCosto(a.getPrecioCosto() + a.getPrecioCosto() * porcentaje / 100);
-                    std::cout << "QUE PORCENTAJE QUIERE MODIFICAR EN EL PRECIO AL PUBLICO?\n";
-                    std::cin >> porcentaje;
-                    a.setPrecioPublico(a.getPrecioPublico() + a.getPrecioPublico() * porcentaje / 100);
-                    arcA.sobreEscribirRegistro(a, x);
-                }
-            }
+            arcA.bajaFisica();
+            system("pause");
             break;
         case 4:
             system("cls");
-            cantidadArticulos = arcA.contarRegistros();
-            for(int x = 0; x < cantidadArticulos; x++){
-                a = arcA.leerRegistro(x);
-                a.mostrar();
-                std::cout << "-----------------------------\n";
-            }
-            system("pause<null");
-            return;
+            listarArticulos();
+            system("pause");
+
             break;
         case 5:
             return;
@@ -203,9 +164,95 @@ void menuArticulos(){
 }
 
 }
+void membrete(){
+    rlutil::locate(1, 1);
+    std::cout << (char)201;
+    for(int x = 0; x < 118; x++){
+        rlutil::locate(2 + x, 1);
+        std::cout << (char)205;
+        rlutil::locate(2 + x, 3);
+        std::cout << (char)205;
+    }
+    rlutil::locate(120, 1);
+    std::cout << (char)187;
+    rlutil::locate(1, 3);
+    std::cout << (char)200;
+    rlutil::locate(120, 3);
+    std::cout << (char)188;
+    rlutil::locate(1, 2);
+    std::cout << (char)186;
+    rlutil::locate(120, 2);
+    std::cout << (char)186;
 
-void menuModificarPrecios(){
+    rlutil::locate(2, 2);
+    std::cout << "GESTION COMERCIAL EL OASIS";
+    rlutil::locate(90, 2);
+    std::cout << "Fecha: ";
+    rlutil::locate(107, 2);
+    std::cout << "Hora: ";
+
+}
+
+void cargaDeArticulos(){
+    Articulo a;
+    ArchivoArticulo arcA("articulos.dat");
+    int continuar = 1;
+    membrete();
+    rlutil::locate(50, 5);
+    std::cout << "CARGA DE ARTICULOS \n";
+    while(continuar == 1){
+        a.cargar();
+        arcA.grabarRegistro(a);
+
+        std::cout << "PRESIONE 1 PARA SEGUIR CARGANDO O 2 PARA VOLVER\n";
+        std::cin >> continuar;
+
+    }
+
+}
+void modificacionDeArticulos(){
+    Articulo a;
+    ArchivoArticulo arcA("articulos.dat");
+    int pos;
+    bool validacion = false;
+    membrete();
+    rlutil::locate(50, 5);
+    std::cout << "MODIFICACION DE ARTICULOS \n";
+
+    if(pos = arcA.buscarPorNombre() >= 0){
+        validacion = true;
+    }
+        if(validacion){
+            a.cargar();
+            arcA.sobreEscribirRegistro(a, pos);
+            std::cout << "REGISTRO MODIFICADO\n";
+    }else{
+        std::cout << "ERROR";
+    }
 
 
+}
+
+void bajaLogicaDeArticulo(){
+    Articulo a;
+    ArchivoArticulo arcA("articulos.dat");
+    int posBaja = arcA.buscarPorNombre();
+    a = arcA.leerRegistro(posBaja);
+    bool baja = arcA.bajaLogica(a, posBaja);
+    if(baja){
+        std::cout << "ARTICULO DADO DE BAJA LOGICA\n";
+    }else{
+        std::cout << "ERROR\n";
+    }
+}
+void listarArticulos(){
+    ArchivoArticulo arcA("articulos.dat");
+    Articulo a;
+    int cantidadArticulos = arcA.contarRegistros();
+    for(int x = 0; x < cantidadArticulos; x++){
+        a = arcA.leerRegistro(x);
+        a.mostrar();
+        std::cout << "-----------------------------\n";
+        }
 
 }

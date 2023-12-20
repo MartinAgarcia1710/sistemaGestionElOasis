@@ -12,6 +12,9 @@
 int main(){
     int movimientoCursorY = 0;
     rlutil::hidecursor();
+
+    membrete();
+
     while (true) {
     rlutil::setBackgroundColor(0);
     rlutil::locate(50, 10);
@@ -35,27 +38,27 @@ int main(){
     }
     std::cout << (char)185;
     rlutil::locate(50, 13);
-    std::cout << (char)186 << "      NUEVA PARTIDA      ";
+    std::cout << (char)186;// << "      NUEVA PARTIDA      ";
     rlutil::locate(76, 13);
     std::cout << (char)186;
     rlutil::locate(50, 14);
-    std::cout << (char)186 << "    REANUDAR PARTIDAS    ";
+    std::cout << (char)186;// << "    REANUDAR PARTIDAS    ";
     rlutil::locate(76, 14);
     std::cout << (char)186;
     rlutil::locate(50, 15);
-    std::cout << (char)186 << "      ESTADISTICAS       ";
+    std::cout << (char)186;// << "      ESTADISTICAS       ";
     rlutil::locate(76, 15);
     std::cout << (char)186;
     rlutil::locate(50, 16);
-    std::cout << (char)186 << "        CREDITOS!        ";
+    std::cout << (char)186;// << "        CREDITOS!        ";
     rlutil::locate(76, 16);
     std::cout << (char)186;
     rlutil::locate(50, 17);
-    std::cout << (char)186 << "          REGLAS         ";
+    std::cout << (char)186;// << "          REGLAS         ";
     rlutil::locate(76, 17);
     std::cout << (char)186;
     rlutil::locate(50, 18);
-    std::cout << (char)186 << "          SALIR          ";
+    std::cout << (char)186;// << "          SALIR          ";
     rlutil::locate(76, 18);
     std::cout << (char)186;
     rlutil::locate(50, 19);

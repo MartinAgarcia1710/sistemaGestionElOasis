@@ -12,6 +12,7 @@ class ArchivoArticulo{
         int buscarPorNombre();
         bool bajaLogica(Articulo reg, int posicion);
         bool sobreEscribirRegistro(Articulo reg, int pos);
+        bool bajaFisica();
 };
 
 #endif // ARCHIVOARTICULO_H_INCLUDED

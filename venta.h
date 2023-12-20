@@ -7,6 +7,7 @@ class Venta{
         float montoTotal;
         Fecha fechaCompra;
         char **detalleArticulos;
+        char detalleVenta[50][30] = {};
 
     public:
         Venta();
