@@ -57,20 +57,20 @@
 1702930590 c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\venta.h
 	"fecha.h"
 
-1703021843 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoarticulo.cpp
+1703106757 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoarticulo.cpp
 	"ArchivoArticulo.h"
 	<iostream>
 	<string.h>
 	<cstring>
 	"Articulo.h"
 
-1703021868 c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoarticulo.h
+1703106757 c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoarticulo.h
 	"Articulo.h"
 
 1702935414 c:\users\martín alejandro\documents\github\sistemagestioneloasis\articulo.h
 	"globales.h"
 
-1702948620 c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.h
+1703113901 c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.h
 
 1702935414 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\articulo.cpp
 	<iostream>
@@ -79,16 +79,16 @@
 	"Articulo.h"
 	"globales.h"
 
-1702935414 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.cpp
+1703109445 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.cpp
 	<iostream>
 	<string.h>
 	<cstring>
 	<ctime>
 	"fecha.h"
 
-1702935414 c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.h
+1703109415 c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.h
 
-1703021962 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.cpp
+1703109415 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -97,8 +97,9 @@
 	"funcionesImpresion.h"
 	"Articulo.h"
 	"ArchivoArticulo.h"
+	"fecha.h"
 
-1702935414 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\venta.cpp
+1703110049 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\venta.cpp
 	<iostream>
 	<cstring>
 	<ctime>
@@ -106,7 +107,7 @@
 	"fecha.h"
 	"globales.h"
 
-1703021108 c:\users\martín alejandro\documents\github\sistemagestioneloasis\venta.h
+1703109937 c:\users\martín alejandro\documents\github\sistemagestioneloasis\venta.h
 	"fecha.h"
 
 1702935633 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\funcionesimpresion.cpp
@@ -130,7 +131,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1702937194 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\main.cpp
+1703113901 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\main.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -141,6 +142,7 @@
 	"fecha.h"
 	"rlutil.h"
 	"funcionesImpresion.h"
+	"venta.h"
 
 1703096355 source:c:\gestioneloasis\sistemagestioneloasis\archivoarticulo.cpp
 	"ArchivoArticulo.h"
@@ -226,4 +228,14 @@
 
 1703102625 c:\gestioneloasis\sistemagestioneloasis\venta.h
 	"fecha.h"
+
+1703113526 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\cliente.cpp
+	<iostream>
+	"cliente.h"
+	<cstring>
+	"globales.h"
+
+1703113493 c:\users\martín alejandro\documents\github\sistemagestioneloasis\cliente.h
+
+1703113990 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoventa.cpp
 

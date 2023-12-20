@@ -4,7 +4,18 @@
 #include <ctime>
 #include "fecha.h"
 
+Fecha::Fecha(){
+    time_t marcaTiempo;
+    marcaTiempo = time(NULL);
+    struct tm *fechaActual;
+    fechaActual = localtime(&marcaTiempo);
+    dia = fechaActual->tm_mday;
+    mes = fechaActual->tm_mon + 1;
+    anio = fechaActual->tm_year + 1900;
+    hora = fechaActual->tm_hour;
+    minutos = fechaActual->tm_min;
 
+}
 void Fecha::Cargar(){
     std::cout << "Ingrese dia: \n";
     std::cin >> dia;
@@ -16,7 +27,7 @@ void Fecha::Cargar(){
 void Fecha::Mostrar(){
     std::cout << dia << "/";
     std::cout << mes << "/";
-    std::cout << anio <<std::endl;
+    std::cout << anio;// <<std::endl;
 }
 int Fecha::getDia(){
     return dia;
@@ -26,6 +37,14 @@ int Fecha::getMes(){
 }
 int Fecha::getAnio(){
     return anio;
+}
+
+int Fecha::getHora(){
+    return hora;
+}
+
+int Fecha::getMinutos(){
+    return minutos;
 }
 
 void Fecha::setDia(int d){

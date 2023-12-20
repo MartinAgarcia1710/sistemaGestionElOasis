@@ -8,13 +8,17 @@
 #include "fecha.h"
 #include "rlutil.h"
 #include "funcionesImpresion.h"
-
+#include "venta.h"
 int main(){
     int movimientoCursorY = 0;
     rlutil::hidecursor();
-
+    Venta v;
     membrete();
+    rlutil::locate(1, 30);
+    v.getFechaCompra();
 
+
+/*
     while (true) {
     rlutil::setBackgroundColor(0);
     rlutil::locate(50, 10);
@@ -72,7 +76,7 @@ int main(){
     rlutil::locate(53, 13 + movimientoCursorY);
 
     remarcarOpcion("      MENU ARTICULOS     ", 51, 13, movimientoCursorY == 0, (rand() % 14) + 1);
-    remarcarOpcion("        MENU VENTAS      ", 51, 14, movimientoCursorY == 1, (rand() % 14) + 1);
+    remarcarOpcion("      CARGAR VENTAS      ", 51, 14, movimientoCursorY == 1, (rand() % 14) + 1);
     remarcarOpcion("     CHEQUEO DE CAJA     ", 51, 15, movimientoCursorY == 2, (rand() % 14) + 1);
     remarcarOpcion("       PROVEEDORES       ", 51, 16, movimientoCursorY == 3, (rand() % 14) + 1);
     remarcarOpcion("           INFO          ", 51, 17, movimientoCursorY == 4, (rand() % 14) + 1);
@@ -100,7 +104,7 @@ int main(){
             menuArticulos();
             break;
         case 1:
-
+            cargarVentas();
             break;
         case 2:
 
@@ -119,7 +123,7 @@ int main(){
     }
 }
 
-
+*/
 
 
 

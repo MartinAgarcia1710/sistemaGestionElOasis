@@ -35,6 +35,10 @@
 		<Unit filename="ArchivoArticulo.h" />
 		<Unit filename="Articulo.cpp" />
 		<Unit filename="Articulo.h" />
+		<Unit filename="archivoVenta.cpp" />
+		<Unit filename="archivoVenta.h" />
+		<Unit filename="cliente.cpp" />
+		<Unit filename="cliente.h" />
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />
 		<Unit filename="funcionesImpresion.cpp" />

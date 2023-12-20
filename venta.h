@@ -4,15 +4,16 @@
 class Venta{
     private:
         int numeroVenta;
+        char detalleVenta[50][30] = {};
         float montoTotal;
         Fecha fechaCompra;
-        char **detalleArticulos;
-        char detalleVenta[50][30] = {};
+
 
     public:
-        Venta();
+
+
         void setNumeroVenta(int nv);
-        void setFechaCompra(Fecha f);
+        void setFechaCompra();
         void setCodigoArticulo(const char* cod);
 
         int getNumeroventa();

@@ -8,5 +8,6 @@ void cargaDeArticulos();
 void modificacionDeArticulos();
 void listarArticulos();
 void membrete();
+void cargarVentas();
 
 #endif // GLOBALES_H_INCLUDED
