@@ -69,7 +69,7 @@ int ArchivoArticulo::buscarPorNombre(){
 }
 bool ArchivoArticulo::bajaLogica(Articulo reg, int posicion){
     FILE *p;
-    p = fopen("articulos.dat", "rb+");
+    p = fopen(nombre, "rb+"); ///cambie "articulos.dat" por nombre... a ver si funciona
     if(p == NULL){
         std::cout << "ERROR DE ARCHIVO\n";
         return false;
@@ -81,3 +81,15 @@ bool ArchivoArticulo::bajaLogica(Articulo reg, int posicion){
     return baja;
 
  }
+bool ArchivoArticulo::sobreEscribirRegistro(Articulo reg, int pos){
+    FILE *p;
+    p = fopen(nombre, "rb+");
+    if(p == NULL){
+            std::cout << "ERROR DE ARCHIVO\n";
+        return false;
+    }
+    fseek(p, sizeof reg*pos, 0);
+    bool escribio = fwrite(&reg, sizeof reg, 1, p);
+    fclose(p);
+    return escribio;
+}

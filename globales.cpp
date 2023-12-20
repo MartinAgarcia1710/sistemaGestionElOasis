@@ -47,6 +47,7 @@ void menuArticulos(){
     char confirmacion;
     rlutil::hidecursor();
     while (true) {
+    system("cls");
     rlutil::setBackgroundColor(0);
     rlutil::locate(50, 10);
     std::cout << (char)201;
@@ -178,7 +179,7 @@ void menuArticulos(){
                     std::cout << "QUE PORCENTAJE QUIERE MODIFICAR EN EL PRECIO AL PUBLICO?\n";
                     std::cin >> porcentaje;
                     a.setPrecioPublico(a.getPrecioPublico() + a.getPrecioPublico() * porcentaje / 100);
-                    ///FALTA METODO PARA SOBREESCRIBIR REGISTRO!
+                    arcA.sobreEscribirRegistro(a, x);
                 }
             }
             break;

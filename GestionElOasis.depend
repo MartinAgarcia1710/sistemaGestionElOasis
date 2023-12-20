@@ -57,14 +57,14 @@
 1702930590 c:\users\marti\onedrive\escritorio\adaptaciongalactic\gestioneloasis\venta.h
 	"fecha.h"
 
-1702945967 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoarticulo.cpp
+1703021843 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoarticulo.cpp
 	"ArchivoArticulo.h"
 	<iostream>
 	<string.h>
 	<cstring>
 	"Articulo.h"
 
-1702945541 c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoarticulo.h
+1703021868 c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoarticulo.h
 	"Articulo.h"
 
 1702935414 c:\users\martín alejandro\documents\github\sistemagestioneloasis\articulo.h
@@ -88,7 +88,7 @@
 
 1702935414 c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.h
 
-1702945841 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.cpp
+1703021962 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -106,7 +106,7 @@
 	"fecha.h"
 	"globales.h"
 
-1702935414 c:\users\martín alejandro\documents\github\sistemagestioneloasis\venta.h
+1703021108 c:\users\martín alejandro\documents\github\sistemagestioneloasis\venta.h
 	"fecha.h"
 
 1702935633 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\funcionesimpresion.cpp
