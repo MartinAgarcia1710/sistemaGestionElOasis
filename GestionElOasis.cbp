@@ -39,6 +39,8 @@
 		<Unit filename="archivoVenta.h" />
 		<Unit filename="cliente.cpp" />
 		<Unit filename="cliente.h" />
+		<Unit filename="direccion.cpp" />
+		<Unit filename="direcion.h" />
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />
 		<Unit filename="funcionesImpresion.cpp" />
@@ -46,6 +48,8 @@
 		<Unit filename="globales.cpp" />
 		<Unit filename="globales.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="persona.cpp" />
+		<Unit filename="persona.h" />
 		<Unit filename="venta.cpp" />
 		<Unit filename="venta.h" />
 		<Extensions />
