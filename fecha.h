@@ -14,6 +14,7 @@ public:
     Fecha();
     void Cargar();
     void Mostrar();
+    void MostrarHora();
     int getDia();
     int getMes();
     int getAnio();
@@ -23,6 +24,8 @@ public:
     void setDia(int d);
     void setMes(int m);
     void setAnio(int a);
+    void setHora(int h);
+    void setMinutos(int mi);
 
 
 };

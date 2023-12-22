@@ -29,6 +29,10 @@ void Fecha::Mostrar(){
     std::cout << mes << "/";
     std::cout << anio;// <<std::endl;
 }
+void Fecha::MostrarHora(){
+    std::cout << hora << ":" << minutos;
+
+}
 int Fecha::getDia(){
     return dia;
 }
@@ -56,4 +60,9 @@ void Fecha::setMes(int m){
 void Fecha::setAnio(int a){
     anio=a;
 }
-
+void Fecha::setHora(int h){
+    hora = h;
+}
+void Fecha::setMinutos(int mi){
+    minutos = mi;
+}

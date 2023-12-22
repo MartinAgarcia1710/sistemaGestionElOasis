@@ -86,9 +86,9 @@
 	<ctime>
 	"fecha.h"
 
-1703109415 c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.h
+1703280042 c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.h
 
-1703109415 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.cpp
+1703114802 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -238,4 +238,8 @@
 1703113493 c:\users\martín alejandro\documents\github\sistemagestioneloasis\cliente.h
 
 1703113990 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoventa.cpp
+
+1703279848 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\direccion.cpp
+
+1703279848 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\persona.cpp
 

@@ -16,7 +16,7 @@ int main(){
     membrete();
     rlutil::locate(1, 30);
     v.getFechaCompra();
-
+    v.
 
 /*
     while (true) {
