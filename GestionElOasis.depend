@@ -157,7 +157,7 @@
 1702903057 c:\gestioneloasis\sistemagestioneloasis\articulo.h
 	"globales.h"
 
-1703096175 c:\gestioneloasis\sistemagestioneloasis\globales.h
+1703172674 c:\gestioneloasis\sistemagestioneloasis\globales.h
 
 1702904420 source:c:\gestioneloasis\sistemagestioneloasis\articulo.cpp
 	<iostream>
@@ -166,14 +166,14 @@
 	"Articulo.h"
 	"globales.h"
 
-1702930553 source:c:\gestioneloasis\sistemagestioneloasis\fecha.cpp
+1703336069 source:c:\gestioneloasis\sistemagestioneloasis\fecha.cpp
 	<iostream>
 	<string.h>
 	<cstring>
 	<ctime>
 	"fecha.h"
 
-1702927768 c:\gestioneloasis\sistemagestioneloasis\fecha.h
+1703336069 c:\gestioneloasis\sistemagestioneloasis\fecha.h
 
 1703013874 source:c:\gestioneloasis\sistemagestioneloasis\funcionesimpresion.cpp
 	<iostream>
@@ -196,7 +196,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1703097097 source:c:\gestioneloasis\sistemagestioneloasis\globales.cpp
+1703172674 source:c:\gestioneloasis\sistemagestioneloasis\globales.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -205,8 +205,9 @@
 	"funcionesImpresion.h"
 	"Articulo.h"
 	"ArchivoArticulo.h"
+	"fecha.h"
 
-1703083683 source:c:\gestioneloasis\sistemagestioneloasis\main.cpp
+1703336069 source:c:\gestioneloasis\sistemagestioneloasis\main.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -217,8 +218,9 @@
 	"fecha.h"
 	"rlutil.h"
 	"funcionesImpresion.h"
+	"venta.h"
 
-1702930553 source:c:\gestioneloasis\sistemagestioneloasis\venta.cpp
+1703172675 source:c:\gestioneloasis\sistemagestioneloasis\venta.cpp
 	<iostream>
 	<cstring>
 	<ctime>
@@ -226,7 +228,7 @@
 	"fecha.h"
 	"globales.h"
 
-1703102625 c:\gestioneloasis\sistemagestioneloasis\venta.h
+1703172675 c:\gestioneloasis\sistemagestioneloasis\venta.h
 	"fecha.h"
 
 1703113526 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\cliente.cpp
@@ -242,4 +244,16 @@
 1703279848 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\direccion.cpp
 
 1703279848 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\persona.cpp
+
+1703172674 source:c:\gestioneloasis\sistemagestioneloasis\archivoventa.cpp
+
+1703172674 source:c:\gestioneloasis\sistemagestioneloasis\cliente.cpp
+	<iostream>
+	"cliente.h"
+	<cstring>
+	"globales.h"
+
+1703172674 c:\gestioneloasis\sistemagestioneloasis\cliente.h
+
+1703187699 source:c:\gestioneloasis\sistemagestioneloasis\direccion.cpp
 
