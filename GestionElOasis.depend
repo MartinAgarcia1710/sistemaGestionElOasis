@@ -253,7 +253,21 @@
 	<cstring>
 	"globales.h"
 
-1703172674 c:\gestioneloasis\sistemagestioneloasis\cliente.h
+1703604410 c:\gestioneloasis\sistemagestioneloasis\cliente.h
 
 1703187699 source:c:\gestioneloasis\sistemagestioneloasis\direccion.cpp
+
+1703337904 source:c:\gestioneloasis\sistemagestioneloasis\persona.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	"persona.h"
+	"fecha.h"
+	"direcion.h"
+
+1703337880 c:\gestioneloasis\sistemagestioneloasis\persona.h
+	"direcion.h"
+	"fecha.h"
+
+1703191933 c:\gestioneloasis\sistemagestioneloasis\direcion.h
 

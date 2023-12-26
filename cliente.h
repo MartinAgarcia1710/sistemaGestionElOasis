@@ -1,7 +1,7 @@
 #ifndef CLIENTE_H_INCLUDED
 #define CLIENTE_H_INCLUDED
 
-class Cliente{
+class Cliente: public Persona{
     private:
         char nombreYapellido[70];
         int numeroCliente;
