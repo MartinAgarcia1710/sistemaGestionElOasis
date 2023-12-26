@@ -1,6 +1,6 @@
 #ifndef CLIENTE_H_INCLUDED
 #define CLIENTE_H_INCLUDED
-
+#include "persona.h"
 class Cliente: public Persona{
     private:
         char nombreYapellido[70];

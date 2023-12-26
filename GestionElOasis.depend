@@ -196,7 +196,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1703172674 source:c:\gestioneloasis\sistemagestioneloasis\globales.cpp
+1703620163 source:c:\gestioneloasis\sistemagestioneloasis\globales.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -207,7 +207,7 @@
 	"ArchivoArticulo.h"
 	"fecha.h"
 
-1703336069 source:c:\gestioneloasis\sistemagestioneloasis\main.cpp
+1703619475 source:c:\gestioneloasis\sistemagestioneloasis\main.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -247,13 +247,14 @@
 
 1703172674 source:c:\gestioneloasis\sistemagestioneloasis\archivoventa.cpp
 
-1703172674 source:c:\gestioneloasis\sistemagestioneloasis\cliente.cpp
+1703618934 source:c:\gestioneloasis\sistemagestioneloasis\cliente.cpp
 	<iostream>
-	"cliente.h"
 	<cstring>
+	"cliente.h"
 	"globales.h"
 
-1703604410 c:\gestioneloasis\sistemagestioneloasis\cliente.h
+1703618715 c:\gestioneloasis\sistemagestioneloasis\cliente.h
+	"persona.h"
 
 1703187699 source:c:\gestioneloasis\sistemagestioneloasis\direccion.cpp
 

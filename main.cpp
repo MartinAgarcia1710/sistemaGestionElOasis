@@ -14,11 +14,11 @@ int main(){
     rlutil::hidecursor();
     Venta v;
     membrete();
-    rlutil::locate(1, 30);
-    v.getFechaCompra();
-    v.
+    //rlutil::locate(1, 30);
+    //v.getFechaCompra();
 
-/*
+
+
     while (true) {
     rlutil::setBackgroundColor(0);
     rlutil::locate(50, 10);
@@ -123,7 +123,7 @@ int main(){
     }
 }
 
-*/
+
 
 
 

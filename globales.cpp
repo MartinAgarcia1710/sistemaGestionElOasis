@@ -48,7 +48,7 @@ void menuArticulos(){
     //char confirmacion;
     rlutil::hidecursor();
     while (true) {
-        system("cls");
+
         rlutil::setBackgroundColor(0);
         rlutil::locate(50, 10);
         std::cout << (char)201;
@@ -101,8 +101,8 @@ void menuArticulos(){
         }
         rlutil::locate(76, 19);
         std::cout << (char)188;
-
-        rlutil::locate(53, 13 + movimientoCursorY);
+                    //53
+        rlutil::locate(51, 13 + movimientoCursorY);
 
         remarcarOpcion("     CARGAR ARTICULOS    ", 51, 13, movimientoCursorY == 0, 5 + 1);
         remarcarOpcion("   MODIFICAR ARTICULOS   ", 51, 14, movimientoCursorY == 1, 5 + 1);
@@ -124,7 +124,7 @@ void menuArticulos(){
             movimientoCursorY++;
             if (movimientoCursorY >= 5) {
                 movimientoCursorY = 5;
-                //rlutil::setBackgroundColor(0);
+                rlutil::setBackgroundColor(0);
             }
             break;
         case 1:
@@ -157,6 +157,7 @@ void menuArticulos(){
 
                     break;
                 case 5:
+
                     return;
                     break;
             }
@@ -189,10 +190,13 @@ void membrete(){
     rlutil::locate(2, 2);
     std::cout << "GESTION COMERCIAL EL OASIS";
     rlutil::locate(90, 2);
-    std::cout << "Fecha: " << act.getDia() << "/" << act.getMes() << "/" << act.getAnio();
+    std::cout << "Fecha: ";
+    rlutil::locate(97, 2);
+    act.Mostrar();
     rlutil::locate(109, 2);
     std::cout << "Hora: " << act.getHora() << ":" << act.getMinutos();
-
+    //rlutil::locate(115, 2);
+    //act.MostrarHora();
 }
 
 void cargaDeArticulos(){

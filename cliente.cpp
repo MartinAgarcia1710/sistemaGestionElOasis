@@ -1,7 +1,8 @@
 #include <iostream>
-#include "cliente.h"
 #include <cstring>
+#include "cliente.h"
 #include "globales.h"
+
 
 void Cliente::setNombreYapellido(const char* nom){
     strcpy(nombreYapellido, nom);
