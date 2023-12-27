@@ -29,7 +29,7 @@ int main(){
     std::cout << (char)187;
     rlutil::locate(50, 11);
     std::cout << (char)186;
-    rlutil::setColor((rand() % 14) + 1);
+    rlutil::setColor(15); //((rand() % 14) + 1);
     std::cout << "    GESTION COMERCIAL";
     rlutil::setColor(7);
     rlutil::locate(76, 11);
@@ -75,12 +75,12 @@ int main(){
 
     rlutil::locate(53, 13 + movimientoCursorY);
 
-    remarcarOpcion("      MENU ARTICULOS     ", 51, 13, movimientoCursorY == 0, (rand() % 14) + 1);
-    remarcarOpcion("      CARGAR VENTAS      ", 51, 14, movimientoCursorY == 1, (rand() % 14) + 1);
-    remarcarOpcion("     CHEQUEO DE CAJA     ", 51, 15, movimientoCursorY == 2, (rand() % 14) + 1);
-    remarcarOpcion("       PROVEEDORES       ", 51, 16, movimientoCursorY == 3, (rand() % 14) + 1);
-    remarcarOpcion("           INFO          ", 51, 17, movimientoCursorY == 4, (rand() % 14) + 1);
-    remarcarOpcion("          SALIR          ", 51, 18, movimientoCursorY == 5, (rand() % 14) + 1);
+    remarcarOpcion("      MENU ARTICULOS     ", 51, 13, movimientoCursorY == 0, 3);
+    remarcarOpcion("      CARGAR VENTAS      ", 51, 14, movimientoCursorY == 1, 3);
+    remarcarOpcion("         CLIENTES        ", 51, 15, movimientoCursorY == 2, 3);
+    remarcarOpcion("       PROVEEDORES       ", 51, 16, movimientoCursorY == 3, 3);
+    remarcarOpcion("           INFO          ", 51, 17, movimientoCursorY == 4, 3);
+    remarcarOpcion("          SALIR          ", 51, 18, movimientoCursorY == 5, 3);
 
     int cursor = rlutil::getkey();
 
@@ -104,9 +104,12 @@ int main(){
             menuArticulos();
             break;
         case 1:
+            system("cls");
             cargarVentas();
             break;
         case 2:
+            system("cls");
+            menuClientes();
 
             break;
         case 3:

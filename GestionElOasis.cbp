@@ -37,6 +37,8 @@
 		<Unit filename="Articulo.h" />
 		<Unit filename="archivoVenta.cpp" />
 		<Unit filename="archivoVenta.h" />
+		<Unit filename="archivoclientes.cpp" />
+		<Unit filename="archivoclientes.h" />
 		<Unit filename="cliente.cpp" />
 		<Unit filename="cliente.h" />
 		<Unit filename="direccion.cpp" />

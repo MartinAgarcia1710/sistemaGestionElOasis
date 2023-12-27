@@ -9,5 +9,6 @@ void modificacionDeArticulos();
 void listarArticulos();
 void membrete();
 void cargarVentas();
+void menuClientes();
 
 #endif // GLOBALES_H_INCLUDED
