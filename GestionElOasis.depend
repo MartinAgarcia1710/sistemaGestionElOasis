@@ -70,7 +70,7 @@
 1703280127 c:\users\martín alejandro\documents\github\sistemagestioneloasis\articulo.h
 	"globales.h"
 
-1703634940 c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.h
+1703723460 c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.h
 
 1702935414 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\articulo.cpp
 	<iostream>
@@ -79,7 +79,7 @@
 	"Articulo.h"
 	"globales.h"
 
-1703284738 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.cpp
+1703721570 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -88,7 +88,7 @@
 
 1703280126 c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.h
 
-1703635717 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.cpp
+1703723520 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -98,6 +98,8 @@
 	"Articulo.h"
 	"ArchivoArticulo.h"
 	"fecha.h"
+	"cliente.h"
+	"archivoclientes.h"
 
 1703110049 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\venta.cpp
 	<iostream>
@@ -131,7 +133,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1703635323 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\main.cpp
+1703720429 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\main.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -143,6 +145,8 @@
 	"rlutil.h"
 	"funcionesImpresion.h"
 	"venta.h"
+	"persona.h"
+	"cliente.h"
 
 1703096355 source:c:\gestioneloasis\sistemagestioneloasis\archivoarticulo.cpp
 	"ArchivoArticulo.h"
@@ -231,20 +235,26 @@
 1703172675 c:\gestioneloasis\sistemagestioneloasis\venta.h
 	"fecha.h"
 
-1703633931 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\cliente.cpp
+1703723075 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\cliente.cpp
 	<iostream>
 	<cstring>
 	"cliente.h"
 	"globales.h"
+	"rlutil.h"
 
-1703633931 c:\users\martín alejandro\documents\github\sistemagestioneloasis\cliente.h
+1703720596 c:\users\martín alejandro\documents\github\sistemagestioneloasis\cliente.h
 	"persona.h"
 
 1703113990 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoventa.cpp
 
-1703279848 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\direccion.cpp
+1703722126 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\direccion.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"direcion.h"
+	"globales.h"
 
-1703633931 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\persona.cpp
+1703718935 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\persona.cpp
 	<iostream>
 	<ctime>
 	<cstring>
@@ -279,9 +289,19 @@
 
 1703191933 c:\gestioneloasis\sistemagestioneloasis\direcion.h
 
-1703633931 c:\users\martín alejandro\documents\github\sistemagestioneloasis\persona.h
+1703718793 c:\users\martín alejandro\documents\github\sistemagestioneloasis\persona.h
 	"direcion.h"
 	"fecha.h"
 
-1703279848 c:\users\martín alejandro\documents\github\sistemagestioneloasis\direcion.h
+1703719741 c:\users\martín alejandro\documents\github\sistemagestioneloasis\direcion.h
+
+1703636262 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoclientes.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"cliente.h"
+	"archivoclientes.h"
+
+1703635757 c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoclientes.h
+	"cliente.h"
 

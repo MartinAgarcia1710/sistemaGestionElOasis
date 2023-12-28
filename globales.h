@@ -10,5 +10,9 @@ void listarArticulos();
 void membrete();
 void cargarVentas();
 void menuClientes();
+void cargarCliente();
+void listarClientes();
+void bajaLogicaCliente();
+void bajaFisicaCliente();
 
 #endif // GLOBALES_H_INCLUDED

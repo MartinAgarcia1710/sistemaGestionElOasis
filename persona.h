@@ -8,6 +8,7 @@ class Persona{
         char numeroTelefono[10];
         char DNI[15];
         char email[30];
+        char cuil[15];
         Fecha nacimiento;
         Direccion domicilio;
         bool estado;
@@ -17,6 +18,7 @@ class Persona{
         const char* getNumeroTelefono();
         const char* getDNI();
         const char* getEmail();
+        const char* getCuil();
         Fecha getNacimiento();
         Direccion getDomicilio();
         bool getEstado();
@@ -25,6 +27,7 @@ class Persona{
         void setNumeroTelefono(const char* nt);
         void setDNI(const char* dn);
         void setEmial(const char* ma);
+        void setCuil(const char* cu);
         void setNacimiento(Fecha fn);
         void setDireccion(Direccion d);
         void setEstado(bool e);

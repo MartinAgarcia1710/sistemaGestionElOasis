@@ -17,6 +17,9 @@ const char* Persona::getDNI(){
 const char* Persona::getEmail(){
     return email;
 }
+const char* Persona::getCuil(){
+    return cuil;
+}
 Fecha Persona::getNacimiento(){
     return nacimiento;
 }
@@ -38,6 +41,9 @@ void Persona::setDNI(const char* dn){
 }
 void Persona::setEmial(const char* ma){
     strcpy(email, ma);
+}
+void Persona::setCuil(const char* cu){
+    strcpy(cuil, cu);
 }
 void Persona::setNacimiento(Fecha fn){
     nacimiento = fn;

@@ -7,6 +7,8 @@
 #include "Articulo.h"
 #include "ArchivoArticulo.h"
 #include "fecha.h"
+#include "cliente.h"
+#include "archivoclientes.h"
 using namespace std;
 
 void cargarCadena(char *pal, int tam){
@@ -105,12 +107,12 @@ void menuArticulos(){
                     //53
         rlutil::locate(51, 13 + movimientoCursorY);
 
-        remarcarOpcion("     CARGAR ARTICULOS    ", 51, 13, movimientoCursorY == 0, 5 + 1);
-        remarcarOpcion("   MODIFICAR ARTICULOS   ", 51, 14, movimientoCursorY == 1, 5 + 1);
-        remarcarOpcion(" BAJA LOGICA DE ARTICULO ", 51, 15, movimientoCursorY == 2, 5 + 1);
-        remarcarOpcion(" BAJA FISICA DE ARTICULO ", 51, 16, movimientoCursorY == 3, 5 + 1);
-        remarcarOpcion("     LISTAR ARTICULOS    ", 51, 17, movimientoCursorY == 4, 5 + 1);
-        remarcarOpcion("          VOLVER         ", 51, 18, movimientoCursorY == 5, 5 + 1);
+        remarcarOpcion("     CARGAR ARTICULOS    ", 51, 13, movimientoCursorY == 0, 5);
+        remarcarOpcion("   MODIFICAR ARTICULOS   ", 51, 14, movimientoCursorY == 1, 5);
+        remarcarOpcion(" BAJA LOGICA DE ARTICULO ", 51, 15, movimientoCursorY == 2, 5);
+        remarcarOpcion(" BAJA FISICA DE ARTICULO ", 51, 16, movimientoCursorY == 3, 5);
+        remarcarOpcion("     LISTAR ARTICULOS    ", 51, 17, movimientoCursorY == 4, 5);
+        remarcarOpcion("          VOLVER         ", 51, 18, movimientoCursorY == 5, 5);
 
         int cursor = rlutil::getkey();
 
@@ -133,6 +135,7 @@ void menuArticulos(){
                 case 0:
                     system("cls");
                     cargaDeArticulos();
+
 
                     break;
                 case 1:
@@ -267,7 +270,9 @@ void cargarVentas(){
 }
 
 void menuClientes(){
+    Cliente c;
     int movimientoCursorY = 0;
+    membrete();
     while (true) {
 
         rlutil::setBackgroundColor(0);
@@ -292,27 +297,27 @@ void menuClientes(){
         }
         std::cout << (char)185;
         rlutil::locate(50, 13);
-        std::cout << (char)186;// << "     CARGAR ARTICULOS    ";
+        std::cout << (char)186;
         rlutil::locate(76, 13);
         std::cout << (char)186;
         rlutil::locate(50, 14);
-        std::cout << (char)186; // << "   MODIFICAR ARTICULOS   ";
+        std::cout << (char)186;
         rlutil::locate(76, 14);
         std::cout << (char)186;
         rlutil::locate(50, 15);
-        std::cout << (char)186;// << "      ESTADISTICAS       ";
+        std::cout << (char)186;
         rlutil::locate(76, 15);
         std::cout << (char)186;
         rlutil::locate(50, 16);
-        std::cout << (char)186;// << "        CREDITOS!        ";
+        std::cout << (char)186;
         rlutil::locate(76, 16);
         std::cout << (char)186;
         rlutil::locate(50, 17);
-        std::cout << (char)186;// << "          REGLAS         ";
+        std::cout << (char)186;
         rlutil::locate(76, 17);
         std::cout << (char)186;
         rlutil::locate(50, 18);
-        std::cout << (char)186;// << "          SALIR          ";
+        std::cout << (char)186;
         rlutil::locate(76, 18);
         std::cout << (char)186;
         rlutil::locate(50, 19);
@@ -325,12 +330,12 @@ void menuClientes(){
                     //53
         rlutil::locate(51, 13 + movimientoCursorY);
 
-        remarcarOpcion("       ALTA CLIENTES     ", 51, 13, movimientoCursorY == 0, 5 + 1);
-        remarcarOpcion("   MODIFICAR ARTICULOS   ", 51, 14, movimientoCursorY == 1, 5 + 1);
-        remarcarOpcion(" BAJA LOGICA DE ARTICULO ", 51, 15, movimientoCursorY == 2, 5 + 1);
-        remarcarOpcion(" BAJA FISICA DE ARTICULO ", 51, 16, movimientoCursorY == 3, 5 + 1);
-        remarcarOpcion("     LISTAR ARTICULOS    ", 51, 17, movimientoCursorY == 4, 5 + 1);
-        remarcarOpcion("          VOLVER         ", 51, 18, movimientoCursorY == 5, 5 + 1);
+        remarcarOpcion("       ALTA CLIENTES     ", 51, 13, movimientoCursorY == 0, 6);
+        remarcarOpcion("     LISTA DE CLIENTES   ", 51, 14, movimientoCursorY == 1, 6);
+        remarcarOpcion(" BAJA LOGICA DE CLIENTES ", 51, 15, movimientoCursorY == 2, 6);
+        remarcarOpcion(" BAJA FISICA DE CLIENTES ", 51, 16, movimientoCursorY == 3, 6);
+        remarcarOpcion("    BUSCAR POR NUMERO    ", 51, 17, movimientoCursorY == 4, 6);
+        remarcarOpcion("          VOLVER         ", 51, 18, movimientoCursorY == 5, 6);
 
         int cursor = rlutil::getkey();
 
@@ -352,11 +357,12 @@ void menuClientes(){
             switch (movimientoCursorY) {
                 case 0:
                     system("cls");
-
+                    cargarCliente();
 
                     break;
                 case 1:
                     system("cls");
+                    listarClientes();
 
                     system("pause");
                     break;
@@ -384,5 +390,36 @@ void menuClientes(){
             }
             break;
         }
+    }
+}
+void cargarCliente(){
+    ArchivoClientes arcC("clientes.dat");
+    Cliente c;
+
+    c.cargar();
+    arcC.grabarRegistro(c);
+}
+
+void listarClientes(){
+    ArchivoClientes arcC("clientes.dat");
+    Cliente c;
+    int cantidadClientes = arcC.contarRegistros();
+
+    for(int x = 0; x < cantidadClientes; x++){
+        c = arcC.leerRegistro(x);
+        c.mostrar();
+    }
+
+}
+void bajaLogicaCliente(){
+    Articulo a;
+    ArchivoArticulo arcA("articulos.dat");
+    int posBaja = arcA.buscarPorNombre();
+    a = arcA.leerRegistro(posBaja);
+    bool baja = arcA.bajaLogica(a, posBaja);
+    if(baja){
+        std::cout << "ARTICULO DADO DE BAJA LOGICA\n";
+    }else{
+        std::cout << "ERROR\n";
     }
 }

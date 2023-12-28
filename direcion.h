@@ -4,12 +4,13 @@
 class Direccion{
     private:
         char calle[50];
-        int altura;
+        char altura[6];
         char localidad[30];
         char provincia[30];
         char pais[50];
     public:
-
+        void cargar();
+        void mostrarDIreccion();
 
 };
 

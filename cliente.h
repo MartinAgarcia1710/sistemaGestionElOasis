@@ -3,24 +3,15 @@
 #include "persona.h"
 class Cliente: public Persona{
     private:
-        char nombreYapellido[70];
-        int numeroCliente;
-        int numeroTelefono;
-        int cuil;
-        bool estado;
-
+        char numeroCliente[10];
+        Fecha ingreso;
     public:
         void cargar();
         void mostrar();
-        void setNombreYapellido(const char* nom);
-        void setNumeroCliente(int nc);
-        void setNumeroTelefono(int nt);
-        void setCuil(int ncu);
+        void setNumeroCliente(const char* num);
+        const char* getNumeroCliente();
 
-        const char* getNombreYapellido();
-        int getNumeroCliente();
-        int getNumeroTelefono();
-        int getCuil();
+
 
 
 

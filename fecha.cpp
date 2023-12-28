@@ -27,7 +27,7 @@ void Fecha::Cargar(){
 void Fecha::Mostrar(){
     std::cout << dia << "/";
     std::cout << mes << "/";
-    std::cout << anio;// <<std::endl;
+    std::cout << anio << "\n";
 }
 void Fecha::MostrarHora(){
     std::cout << hora << ":" << minutos;

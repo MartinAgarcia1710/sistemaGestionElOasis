@@ -9,7 +9,11 @@
 #include "rlutil.h"
 #include "funcionesImpresion.h"
 #include "venta.h"
+#include "persona.h"
+#include "cliente.h"
 int main(){
+
+
     int movimientoCursorY = 0;
     rlutil::hidecursor();
     Venta v;
