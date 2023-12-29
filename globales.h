@@ -14,5 +14,7 @@ void cargarCliente();
 void listarClientes();
 void bajaLogicaCliente();
 void bajaFisicaCliente();
+void modificarCliente();
+void menuEmpleados();
 
 #endif // GLOBALES_H_INCLUDED

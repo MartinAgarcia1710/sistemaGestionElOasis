@@ -45,7 +45,7 @@ int ArchivoClientes::buscarPorNombre(){
     FILE *p;
     int posicion = 0;
     int posReg;
-    bool existe=false;
+    bool existe = false;
     p = fopen("clientes.dat","rb");
     if(p == NULL){
         std::cout << "ERROR DE ARCHIVO\n";
@@ -84,7 +84,7 @@ bool ArchivoClientes::bajaLogica(Cliente reg, int posicion){
  }
 bool ArchivoClientes::sobreEscribirRegistro(Cliente reg, int pos){
     FILE *p;
-    p = fopen("articulos.dat", "rb+");
+    p = fopen("clientes.dat", "rb+");
     if(p == NULL){
             std::cout << "ERROR DE ARCHIVO\n";
         return false;

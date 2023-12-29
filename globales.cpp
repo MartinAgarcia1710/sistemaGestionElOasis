@@ -37,19 +37,12 @@ void remarcarOpcion(const char* opcion, int posX, int posY, bool seleccion, int 
 }
 
 void menuArticulos(){
-    //bool baja;
-    //int porcentaje;
-    //int posBaja;
+
     int movimientoCursorY = 0;
-    //int contadorCarga = 0;
-    //int continuar = 1;
-    //Articulo a;
     ArchivoArticulo arcA("articulos.dat");
-    //int cantidadArticulos;
-    //char nombre[30];
-    //char confirmacion;
     rlutil::hidecursor();
     membrete();
+
     while (true) {
 
         rlutil::setBackgroundColor(0);
@@ -135,29 +128,34 @@ void menuArticulos(){
                 case 0:
                     system("cls");
                     cargaDeArticulos();
-
+                    system("cls");
+                    system("pause>null");
 
                     break;
                 case 1:
                     system("cls");
                     modificacionDeArticulos();
-                    system("pause");
+                    system("cls");
+                    system("pause>null");
                     break;
                 case 2:
                     system("cls");
                     bajaLogicaDeArticulo();
-                    system("pause");
+                    system("cls");
+                    system("pause>null");
 
                     break;
                 case 3:
                     system("cls");
                     arcA.bajaFisica();
-                    system("pause");
+                    system("cls");
+                    system("pause>null");
                     break;
                 case 4:
                     system("cls");
                     listarArticulos();
-                    system("pause");
+                    system("cls");
+                    system("pause>null");
 
                     break;
                 case 5:
@@ -334,7 +332,7 @@ void menuClientes(){
         remarcarOpcion("     LISTA DE CLIENTES   ", 51, 14, movimientoCursorY == 1, 6);
         remarcarOpcion(" BAJA LOGICA DE CLIENTES ", 51, 15, movimientoCursorY == 2, 6);
         remarcarOpcion(" BAJA FISICA DE CLIENTES ", 51, 16, movimientoCursorY == 3, 6);
-        remarcarOpcion("    BUSCAR POR NUMERO    ", 51, 17, movimientoCursorY == 4, 6);
+        remarcarOpcion("    MODIFICAR CLIENTE    ", 51, 17, movimientoCursorY == 4, 6);
         remarcarOpcion("          VOLVER         ", 51, 18, movimientoCursorY == 5, 6);
 
         int cursor = rlutil::getkey();
@@ -363,25 +361,26 @@ void menuClientes(){
                 case 1:
                     system("cls");
                     listarClientes();
-
-                    system("pause");
+                    system("pause>null");
+                    system("cls");
                     break;
                 case 2:
                     system("cls");
-
-                    system("pause");
+                    bajaLogicaCliente();
+                    system("pause>null");
 
                     break;
                 case 3:
                     system("cls");
-
-                    system("pause");
+                    bajaFisicaCliente();
+                    system("cls");
+                    system("pause>null");
                     break;
                 case 4:
                     system("cls");
-
-                    system("pause");
-
+                    modificarCliente();
+                    system("cls");
+                    system("pause>null");
                     break;
                 case 5:
 
@@ -395,31 +394,178 @@ void menuClientes(){
 void cargarCliente(){
     ArchivoClientes arcC("clientes.dat");
     Cliente c;
-
+    membrete();
+    rlutil::locate(50, 5);
+    std::cout << "ALTA DE CLIENTE \n";
     c.cargar();
     arcC.grabarRegistro(c);
 }
-
 void listarClientes(){
     ArchivoClientes arcC("clientes.dat");
     Cliente c;
     int cantidadClientes = arcC.contarRegistros();
-
+    membrete();
     for(int x = 0; x < cantidadClientes; x++){
         c = arcC.leerRegistro(x);
+        //rlutil::locate(33, 10 + x * 10);
+        std::cout << "-------------------------------------------------------------------\n";
         c.mostrar();
     }
-
 }
 void bajaLogicaCliente(){
-    Articulo a;
-    ArchivoArticulo arcA("articulos.dat");
-    int posBaja = arcA.buscarPorNombre();
-    a = arcA.leerRegistro(posBaja);
-    bool baja = arcA.bajaLogica(a, posBaja);
+    Cliente c;
+    ArchivoClientes arcC("clientes.dat");
+    membrete();
+    rlutil::locate(50, 5);
+    std::cout << "BAJA LOGICA DE CLIENTE \n";
+    int posBaja = arcC.buscarPorNombre();
+    c = arcC.leerRegistro(posBaja);
+    bool baja = arcC.bajaLogica(c, posBaja);
     if(baja){
-        std::cout << "ARTICULO DADO DE BAJA LOGICA\n";
+        std::cout << "CLIENTE DADO DE BAJA LOGICA\n";
     }else{
         std::cout << "ERROR\n";
     }
 }
+void bajaFisicaCliente(){
+    ArchivoClientes arcC("clientes.dat");
+    char conf;
+    membrete();
+    rlutil::locate(50, 6);
+    std::cout << "BAJA FISICA DE CLIENTES \n";
+    std::cout << "ESTA SEGURO/A QUE QUIERE DAR DE BAJA FISICA TODOS LOS CLIENTES INACTIVOS?\n";
+    std::cout << "TENER EN CUENTA QUE LA CONFIRMACION ELIMINARIA DE MANERA PERMANENTE DICHOS REGISTROS\n";
+    std::cout << "S: SI - N: NO\n";
+    std::cin >> conf;
+
+    if(conf == 's' || conf == 'S'){
+        arcC.bajaFisica();
+    }else{
+        return;
+    }
+}
+void modificarCliente(){
+    Cliente c;
+    ArchivoClientes arcC("clientes.dat");
+    membrete();
+    bool validacion = false;
+    membrete();
+    rlutil::locate(50, 5);
+    std::cout << "MODIFICACION DE CLIENTE \n";
+    int pos = arcC.buscarPorNombre();
+    if(pos >= 0){ //= arcA.buscarPorNombre() >= 0){
+        validacion = true;
+    }
+        if(validacion){
+            system("cls");
+            c.cargar();
+            arcC.sobreEscribirRegistro(c, pos);
+            std::cout << "REGISTRO MODIFICADO\n";
+            system("pause>null");
+    }else{
+        std::cout << "ERROR";
+        system("pause>null");
+    }
+}
+void menuEmpleados(){
+    int movimientoCursorY = 0;
+    while (true) {
+
+        rlutil::setBackgroundColor(0);
+        rlutil::locate(50, 10);
+        std::cout << (char)201;
+        rlutil::locate(76, 10);
+        std::cout << (char)187;
+        rlutil::locate(50, 19);
+        std::cout << (char)200;
+        rlutil::locate(76, 19);
+        std::cout << (char)188;
+        rlutil::locate(50, 12);
+        std::cout << (char)204;
+        rlutil::locate(76, 12);
+        std::cout << (char)185;
+        rlutil::locate(50, 11);
+        std::cout << (char)186;
+        rlutil::locate(76, 11);
+        std::cout << (char)186;
+        for(int x = 0; x < 25; x++){
+            rlutil::locate(51 + x, 10);
+            std::cout << (char)205;
+            rlutil::locate(51 + x, 12);
+            std::cout << (char)205;
+            rlutil::locate(51 + x, 19);
+            std::cout << (char)205;
+        }
+        for(int x = 0; x < 6; x++){
+            rlutil::locate(50, 13 + x);
+            std::cout << (char)186;
+            rlutil::locate(76, 13 + x);
+            std::cout << (char)186;
+        }
+        rlutil::locate(51, 11);
+        std::cout << "      MENU EMPLEADOS";
+
+        rlutil::locate(51, 13 + movimientoCursorY);
+
+        remarcarOpcion("       ALTA EMPLEADO     ", 51, 13, movimientoCursorY == 0, 4);
+        remarcarOpcion("    LISTA DE EMPLEADOS   ", 51, 14, movimientoCursorY == 1, 4);
+        remarcarOpcion("BAJA LOGICA DE EMPLEADOS ", 51, 15, movimientoCursorY == 2, 4);
+        remarcarOpcion("BAJA FISICA DE EMPLEADOS ", 51, 16, movimientoCursorY == 3, 4);
+        remarcarOpcion("    MODIFICAR EMPLEADO   ", 51, 17, movimientoCursorY == 4, 4);
+        remarcarOpcion("          VOLVER         ", 51, 18, movimientoCursorY == 5, 4);
+
+        int cursor = rlutil::getkey();
+        switch (cursor) {
+            case 14:
+            movimientoCursorY--;
+                if (movimientoCursorY <= 0) {
+                    movimientoCursorY = 0;
+                }
+                break;
+            case 15:
+                movimientoCursorY++;
+                if (movimientoCursorY >= 5) {
+                    movimientoCursorY = 5;
+                }
+                break;
+            case 1:
+                switch (movimientoCursorY) {
+                    case 0:
+                        system("cls");
+                        break;
+                    case 1:
+                        system("cls");
+
+                        system("pause>null");
+                        system("cls");
+                        break;
+                    case 2:
+                        system("cls");
+
+                        system("pause>null");
+
+                        break;
+                    case 3:
+                        system("cls");
+
+                        system("cls");
+                        system("pause>null");
+                        break;
+                    case 4:
+                        system("cls");
+
+                        system("cls");
+                        system("pause>null");
+                        break;
+                    case 5:
+                        return;
+                        break;
+            }
+            break;
+        }
+    }
+}
+
+
+
+

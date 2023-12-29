@@ -46,27 +46,27 @@ int main(){
     }
     std::cout << (char)185;
     rlutil::locate(50, 13);
-    std::cout << (char)186;// << "      NUEVA PARTIDA      ";
+    std::cout << (char)186;
     rlutil::locate(76, 13);
     std::cout << (char)186;
     rlutil::locate(50, 14);
-    std::cout << (char)186;// << "    REANUDAR PARTIDAS    ";
+    std::cout << (char)186;
     rlutil::locate(76, 14);
     std::cout << (char)186;
     rlutil::locate(50, 15);
-    std::cout << (char)186;// << "      ESTADISTICAS       ";
+    std::cout << (char)186;
     rlutil::locate(76, 15);
     std::cout << (char)186;
     rlutil::locate(50, 16);
-    std::cout << (char)186;// << "        CREDITOS!        ";
+    std::cout << (char)186;
     rlutil::locate(76, 16);
     std::cout << (char)186;
     rlutil::locate(50, 17);
-    std::cout << (char)186;// << "          REGLAS         ";
+    std::cout << (char)186;
     rlutil::locate(76, 17);
     std::cout << (char)186;
     rlutil::locate(50, 18);
-    std::cout << (char)186;// << "          SALIR          ";
+    std::cout << (char)186;
     rlutil::locate(76, 18);
     std::cout << (char)186;
     rlutil::locate(50, 19);
@@ -83,7 +83,7 @@ int main(){
     remarcarOpcion("      CARGAR VENTAS      ", 51, 14, movimientoCursorY == 1, 3);
     remarcarOpcion("         CLIENTES        ", 51, 15, movimientoCursorY == 2, 3);
     remarcarOpcion("       PROVEEDORES       ", 51, 16, movimientoCursorY == 3, 3);
-    remarcarOpcion("           INFO          ", 51, 17, movimientoCursorY == 4, 3);
+    remarcarOpcion("        EMPLEADOS        ", 51, 17, movimientoCursorY == 4, 3);
     remarcarOpcion("          SALIR          ", 51, 18, movimientoCursorY == 5, 3);
 
     int cursor = rlutil::getkey();
@@ -120,6 +120,8 @@ int main(){
 
             break;
         case 4:
+             system("cls");
+            menuEmpleados();
 
             break;
         case 5:

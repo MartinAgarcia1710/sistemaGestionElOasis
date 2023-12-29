@@ -3,6 +3,7 @@
 #include "cliente.h"
 #include "globales.h"
 #include "rlutil.h"
+#include "archivoclientes.h"
 
 void Cliente::setNumeroCliente(const char* num){
     strcpy(numeroCliente, num);
@@ -35,27 +36,29 @@ void Cliente::cargar(){
 
 }
 void Cliente::mostrar(){
-    rlutil::locate(33, 10);
+
+    //rlutil::locate(33, 10);
     std::cout << "Numero de Cliente: " << numeroCliente << "\n";
-    rlutil::locate(33, 11);
+    //rlutil::locate(33, 11);
     std::cout << "Nombre: " << nombreYapellido << "\n";
-    rlutil::locate(33, 12);
+    //rlutil::locate(33, 12);
     std::cout << "Numero de Telefono: " << numeroTelefono << "\n";
-    rlutil::locate(33, 13);
+    //rlutil::locate(33, 13);
     std::cout << "DNI: " << DNI << "\n";
-    rlutil::locate(33, 14);
+    //rlutil::locate(33, 14);
     std::cout << "CUIL: " << cuil << "\n";
-    rlutil::locate(33, 15);
+    //rlutil::locate(33, 15);
     std::cout << "CORREO ELECTRONICO: " << email << "\n";
-    rlutil::locate(33, 16);
+    //rlutil::locate(33, 16);
     std::cout << "FECHA DE NACIMIENTO: ";
 
     nacimiento.Mostrar();
-    rlutil::locate(33, 17);
+    //rlutil::locate(33, 17);
     domicilio.mostrarDIreccion();
-    rlutil::locate(33, 18);
+    //rlutil::locate(33, 18);
     std::cout << "FECHA DE INGRESO: ";
     ingreso.Mostrar();
-    rlutil::locate(33, 19);
+    //rlutil::locate(33, 19);
     std::cout << "Estado: " << estado << "\n";
+
 }
