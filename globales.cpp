@@ -407,7 +407,6 @@ void listarClientes(){
     membrete();
     for(int x = 0; x < cantidadClientes; x++){
         c = arcC.leerRegistro(x);
-        //rlutil::locate(33, 10 + x * 10);
         std::cout << "-------------------------------------------------------------------\n";
         c.mostrar();
     }

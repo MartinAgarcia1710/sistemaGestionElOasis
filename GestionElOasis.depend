@@ -161,7 +161,7 @@
 1702903057 c:\gestioneloasis\sistemagestioneloasis\articulo.h
 	"globales.h"
 
-1703172674 c:\gestioneloasis\sistemagestioneloasis\globales.h
+1703855983 c:\gestioneloasis\sistemagestioneloasis\globales.h
 
 1702904420 source:c:\gestioneloasis\sistemagestioneloasis\articulo.cpp
 	<iostream>
@@ -170,7 +170,7 @@
 	"Articulo.h"
 	"globales.h"
 
-1703336069 source:c:\gestioneloasis\sistemagestioneloasis\fecha.cpp
+1703855983 source:c:\gestioneloasis\sistemagestioneloasis\fecha.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -211,7 +211,7 @@
 	"ArchivoArticulo.h"
 	"fecha.h"
 
-1703619475 source:c:\gestioneloasis\sistemagestioneloasis\main.cpp
+1703855983 source:c:\gestioneloasis\sistemagestioneloasis\main.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -223,6 +223,8 @@
 	"rlutil.h"
 	"funcionesImpresion.h"
 	"venta.h"
+	"persona.h"
+	"cliente.h"
 
 1703172675 source:c:\gestioneloasis\sistemagestioneloasis\venta.cpp
 	<iostream>
@@ -232,7 +234,7 @@
 	"fecha.h"
 	"globales.h"
 
-1703172675 c:\gestioneloasis\sistemagestioneloasis\venta.h
+1703622503 c:\gestioneloasis\sistemagestioneloasis\venta.h
 	"fecha.h"
 
 1703801321 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\cliente.cpp
@@ -265,18 +267,25 @@
 
 1703172674 source:c:\gestioneloasis\sistemagestioneloasis\archivoventa.cpp
 
-1703618934 source:c:\gestioneloasis\sistemagestioneloasis\cliente.cpp
+1703855983 source:c:\gestioneloasis\sistemagestioneloasis\cliente.cpp
 	<iostream>
 	<cstring>
 	"cliente.h"
 	"globales.h"
+	"rlutil.h"
+	"archivoclientes.h"
 
-1703618715 c:\gestioneloasis\sistemagestioneloasis\cliente.h
+1703855983 c:\gestioneloasis\sistemagestioneloasis\cliente.h
 	"persona.h"
 
-1703187699 source:c:\gestioneloasis\sistemagestioneloasis\direccion.cpp
+1703855983 source:c:\gestioneloasis\sistemagestioneloasis\direccion.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"direcion.h"
+	"globales.h"
 
-1703337904 source:c:\gestioneloasis\sistemagestioneloasis\persona.cpp
+1703855984 source:c:\gestioneloasis\sistemagestioneloasis\persona.cpp
 	<iostream>
 	<ctime>
 	<cstring>
@@ -284,11 +293,11 @@
 	"fecha.h"
 	"direcion.h"
 
-1703337880 c:\gestioneloasis\sistemagestioneloasis\persona.h
+1703855984 c:\gestioneloasis\sistemagestioneloasis\persona.h
 	"direcion.h"
 	"fecha.h"
 
-1703191933 c:\gestioneloasis\sistemagestioneloasis\direcion.h
+1703855983 c:\gestioneloasis\sistemagestioneloasis\direcion.h
 
 1703718793 c:\users\martín alejandro\documents\github\sistemagestioneloasis\persona.h
 	"direcion.h"
@@ -304,5 +313,15 @@
 	"archivoclientes.h"
 
 1703635757 c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoclientes.h
+	"cliente.h"
+
+1703855983 source:c:\gestioneloasis\sistemagestioneloasis\archivoclientes.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"cliente.h"
+	"archivoclientes.h"
+
+1703855983 c:\gestioneloasis\sistemagestioneloasis\archivoclientes.h
 	"cliente.h"
 
