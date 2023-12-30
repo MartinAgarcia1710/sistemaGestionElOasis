@@ -39,10 +39,14 @@
 		<Unit filename="archivoVenta.h" />
 		<Unit filename="archivoclientes.cpp" />
 		<Unit filename="archivoclientes.h" />
+		<Unit filename="archivoempleados.cpp" />
+		<Unit filename="archivoempleados.h" />
 		<Unit filename="cliente.cpp" />
 		<Unit filename="cliente.h" />
 		<Unit filename="direccion.cpp" />
 		<Unit filename="direcion.h" />
+		<Unit filename="empleado.cpp" />
+		<Unit filename="empleado.h" />
 		<Unit filename="fecha.cpp" />
 		<Unit filename="fecha.h" />
 		<Unit filename="funcionesImpresion.cpp" />

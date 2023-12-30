@@ -88,7 +88,7 @@
 
 1703280126 c:\users\martín alejandro\documents\github\sistemagestioneloasis\fecha.h
 
-1703804516 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.cpp
+1703886680 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\globales.cpp
 	<iostream>
 	<string.h>
 	<cstring>
@@ -324,4 +324,26 @@
 
 1703855983 c:\gestioneloasis\sistemagestioneloasis\archivoclientes.h
 	"cliente.h"
+
+1703886680 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\proveedor.cpp
+
+1703892000 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\empleado.cpp
+	<iostream>
+	<cstring>
+	"empleado.h"
+	"globales.h"
+	"rlutil.h"
+
+1703892610 c:\users\martín alejandro\documents\github\sistemagestioneloasis\empleado.h
+	"persona.h"
+
+1703892068 source:c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoempleados.cpp
+	"Archivoempleados.h"
+	<iostream>
+	<string.h>
+	<cstring>
+	"empleado.h"
+
+1703891980 c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoempleados.h
+	"empleado.h"
 
