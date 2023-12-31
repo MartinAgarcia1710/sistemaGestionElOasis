@@ -6,7 +6,7 @@
 
 void Empleado::cargar(){
 
-    std::cout << "INGRESAR NOMBRE DEL CLIENTE\n";
+    std::cout << "INGRESAR NOMBRE DEL EMPLEADO\n";
     cargarCadena(nombreYapellido, 69);
     std::cout << "INGRESAR NUMERO DE TELEFONO\n";
     cargarCadena(numeroTelefono, 9);

@@ -16,5 +16,10 @@ void bajaLogicaCliente();
 void bajaFisicaCliente();
 void modificarCliente();
 void menuEmpleados();
+void altaEmpleado();
+void listarEmpleados();
+void bajaLogicaEmpleados();
+void bajaFisicaEmpleados();
+void modificarEmpleado();
 
 #endif // GLOBALES_H_INCLUDED

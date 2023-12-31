@@ -120,7 +120,7 @@ int main(){
 
             break;
         case 4:
-             system("cls");
+            system("cls");
             menuEmpleados();
 
             break;

@@ -9,6 +9,8 @@
 #include "fecha.h"
 #include "cliente.h"
 #include "archivoclientes.h"
+#include "empleado.h"
+#include "archivoempleados.h"
 using namespace std;
 
 void cargarCadena(char *pal, int tam){
@@ -468,6 +470,7 @@ void modificarCliente(){
 }
 void menuEmpleados(){
     int movimientoCursorY = 0;
+    membrete();
     while (true) {
 
         rlutil::setBackgroundColor(0);
@@ -531,28 +534,30 @@ void menuEmpleados(){
                 switch (movimientoCursorY) {
                     case 0:
                         system("cls");
+                        altaEmpleado();
+                        system("pause>null");
                         break;
                     case 1:
                         system("cls");
-
+                        listarEmpleados();
                         system("pause>null");
                         system("cls");
                         break;
                     case 2:
                         system("cls");
-
+                        bajaLogicaEmpleados();
                         system("pause>null");
 
                         break;
                     case 3:
                         system("cls");
-
+                        bajaFisicaEmpleados();
                         system("cls");
                         system("pause>null");
                         break;
                     case 4:
                         system("cls");
-
+                        modificarEmpleado();
                         system("cls");
                         system("pause>null");
                         break;
@@ -564,7 +569,81 @@ void menuEmpleados(){
         }
     }
 }
+void altaEmpleado(){
+    ArchivoEmpleado arcE("empleados.dat");
+    Empleado e;
+    membrete();
+    rlutil::locate(50, 5);
+    std::cout << "ALTA DE EMPLEADO \n";
+    e.cargar();
+    arcE.grabarRegistro(e);
+}
 
+void listarEmpleados(){
+    ArchivoEmpleado arcE("empleados.dat");
+    Empleado e;
+    int cantidadEmpleados = arcE.contarRegistros();
+    membrete();
+    rlutil::locate(50, 5);
+    std::cout << "LISTADO DE EMPLEADOS\n";
+    for(int x = 0; x < cantidadEmpleados; x++){
+        e = arcE.leerRegistro(x);
+        std::cout << "-------------------------------------------------------------------\n";
+        e.mostrar();
+    }
+}
+void bajaLogicaEmpleados(){
+    Empleado e;
+    ArchivoEmpleado arcE("empleados.dat");
+    membrete();
+    rlutil::locate(50, 5);
+    std::cout << "BAJA LOGICA DE EMPLEADO \n";
+    int posBaja = arcE.buscarPorNombre();
+    e = arcE.leerRegistro(posBaja);
+    bool baja = arcE.bajaLogica(e, posBaja);
+    if(baja){
+        std::cout << "EMPLEADO DADO DE BAJA LOGICA\n";
+    }else{
+        std::cout << "ERROR\n";
+    }
+}
+void bajaFisicaEmpleados(){
+    ArchivoEmpleado arcE("empleados.dat");
+    char conf;
+    membrete();
+    rlutil::locate(50, 6);
+    std::cout << "BAJA FISICA DE EMPLEADOS \n";
+    std::cout << "ESTA SEGURO/A QUE QUIERE DAR DE BAJA FISICA TODOS LOS EMPLEADOS INACTIVOS?\n";
+    std::cout << "TENER EN CUENTA QUE LA CONFIRMACION ELIMINARIA DE MANERA PERMANENTE DICHOS REGISTROS\n";
+    std::cout << "S: SI - N: NO\n";
+    std::cin >> conf;
 
-
-
+    if(conf == 's' || conf == 'S'){
+        arcE.bajaFisica();
+    }else{
+        return;
+    }
+}
+void modificarEmpleado(){
+    Empleado e;
+    ArchivoEmpleado arcE("empleados.dat");
+    membrete();
+    bool validacion = false;
+    membrete();
+    rlutil::locate(50, 5);
+    std::cout << "MODIFICACION DE EMPLEADO \n";
+    int pos = arcE.buscarPorNombre();
+    if(pos >= 0){
+        validacion = true;
+    }
+        if(validacion){
+            system("cls");
+            e.cargar();
+            arcE.sobreEscribirRegistro(e, pos);
+            std::cout << "REGISTRO MODIFICADO\n";
+            system("pause>null");
+    }else{
+        std::cout << "ERROR";
+        system("pause>null");
+    }
+}
