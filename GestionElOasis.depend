@@ -349,3 +349,162 @@
 1703891980 c:\users\martín alejandro\documents\github\sistemagestioneloasis\archivoempleados.h
 	"empleado.h"
 
+1720918144 source:d:\sistemagestioneloasis\archivoarticulo.cpp
+	"ArchivoArticulo.h"
+	<iostream>
+	<string.h>
+	<cstring>
+	"Articulo.h"
+
+1720918144 d:\sistemagestioneloasis\archivoarticulo.h
+	"Articulo.h"
+
+1720918144 d:\sistemagestioneloasis\articulo.h
+	"globales.h"
+
+1720918144 d:\sistemagestioneloasis\globales.h
+
+1720918144 source:d:\sistemagestioneloasis\archivoclientes.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"cliente.h"
+	"archivoclientes.h"
+
+1720918144 d:\sistemagestioneloasis\cliente.h
+	"persona.h"
+
+1720918144 d:\sistemagestioneloasis\persona.h
+	"direcion.h"
+	"fecha.h"
+
+1720918144 d:\sistemagestioneloasis\direcion.h
+
+1720918144 d:\sistemagestioneloasis\fecha.h
+
+1720918144 d:\sistemagestioneloasis\archivoclientes.h
+	"cliente.h"
+
+1720918144 source:d:\sistemagestioneloasis\archivoempleados.cpp
+	"Archivoempleados.h"
+	<iostream>
+	<string.h>
+	<cstring>
+	"empleado.h"
+
+1720918144 d:\sistemagestioneloasis\archivoempleados.h
+	"empleado.h"
+
+1720918144 d:\sistemagestioneloasis\empleado.h
+	"persona.h"
+
+1720918144 source:d:\sistemagestioneloasis\archivoventa.cpp
+
+1720918144 source:d:\sistemagestioneloasis\articulo.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"Articulo.h"
+	"globales.h"
+
+1720918144 source:d:\sistemagestioneloasis\cliente.cpp
+	<iostream>
+	<cstring>
+	"cliente.h"
+	"globales.h"
+	"rlutil.h"
+	"archivoclientes.h"
+
+1720918144 d:\sistemagestioneloasis\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1720918144 source:d:\sistemagestioneloasis\direccion.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"direcion.h"
+	"globales.h"
+
+1720918144 source:d:\sistemagestioneloasis\empleado.cpp
+	<iostream>
+	<cstring>
+	"empleado.h"
+	"globales.h"
+	"rlutil.h"
+
+1720918144 source:d:\sistemagestioneloasis\fecha.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	<ctime>
+	"fecha.h"
+
+1720918144 source:d:\sistemagestioneloasis\funcionesimpresion.cpp
+	<iostream>
+	"funcionesImpresion.h"
+	"rlutil.h"
+
+1720918144 d:\sistemagestioneloasis\funcionesimpresion.h
+
+1720918144 source:d:\sistemagestioneloasis\globales.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	"globales.h"
+	"rlutil.h"
+	"funcionesImpresion.h"
+	"Articulo.h"
+	"ArchivoArticulo.h"
+	"fecha.h"
+	"cliente.h"
+	"archivoclientes.h"
+	"empleado.h"
+	"archivoempleados.h"
+
+1720918144 source:d:\sistemagestioneloasis\main.cpp
+	<iostream>
+	<string.h>
+	<cstring>
+	<ctime>
+	"globales.h"
+	"Articulo.h"
+	"ArchivoArticulo.h"
+	"fecha.h"
+	"rlutil.h"
+	"funcionesImpresion.h"
+	"venta.h"
+	"persona.h"
+	"cliente.h"
+
+1720918144 d:\sistemagestioneloasis\venta.h
+	"fecha.h"
+
+1720918144 source:d:\sistemagestioneloasis\persona.cpp
+	<iostream>
+	<ctime>
+	<cstring>
+	"persona.h"
+	"fecha.h"
+	"direcion.h"
+
+1720918144 source:d:\sistemagestioneloasis\proveedor.cpp
+
+1720918144 source:d:\sistemagestioneloasis\venta.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	"venta.h"
+	"fecha.h"
+	"globales.h"
+
